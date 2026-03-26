@@ -74,7 +74,7 @@ export default function TechStack() {
             Engineered Tech Stack
           </motion.p>
 
-          <motion.h2 variants={fadeUp} className="text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-foreground">
+          <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-none text-foreground">
             Stack<br />Excellence
           </motion.h2>
 
