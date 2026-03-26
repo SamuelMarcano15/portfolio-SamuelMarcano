@@ -175,7 +175,7 @@ export default function AboutMe() {
         </motion.div>
 
         {/* ── Bottom row: Remote + CTA ─────────────────────── */}
-        <motion.div variants={fadeUp} className="md:col-span-7 grid grid-cols-2 gap-5">
+        <motion.div variants={fadeUp} className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
           {/* Remote/Global */}
           <div
             className="flex flex-col justify-between min-h-[200px] gap-4 p-6 rounded-3xl"
@@ -210,7 +210,7 @@ export default function AboutMe() {
 
               <Button
                 size="lg"
-                className="w-full flex items-center justify-center px-2 gap-2 text-white text-xs whitespace-nowrap"
+                className="w-full flex-col sm:flex items-center justify-center px-2 gap-2 text-white text-xs md:whitespace-nowrap"
                 onClick={() =>
                   document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })
                 }
