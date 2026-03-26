@@ -125,18 +125,18 @@ export default function TechStack() {
               {techCategories.map((category, index) => (
                 <div
                   key={index}
-                  className="w-full h-full bg-[#031522] border border-secondary rounded-3xl p-8 flex flex-col shadow-2xl"
+                  className="w-full h-full bg-[#031522] border border-secondary rounded-3xl p-5 sm:p-8 flex flex-col shadow-2xl overflow-y-auto overflow-x-hidden"
                 >
-                  <h3 className="text-xl font-black text-primary tracking-[0.15em] uppercase border-b border-secondary/50 pb-3 mb-6">
+                  <h3 className="text-lg sm:text-xl font-black text-primary tracking-[0.15em] uppercase border-b border-secondary/50 pb-2 sm:pb-3 mb-4 sm:mb-6 shrink-0">
                     {category.title}
                   </h3>
-                  <ul className="grid grid-cols-2 gap-x-6 gap-y-5 flex-1 content-start">
+                  <ul className="grid grid-cols-2 gap-x-2 sm:gap-x-6 gap-y-4 sm:gap-y-5 flex-1 content-start">
                     {category.skills.map((skill, i) => (
-                      <li key={i} className="flex items-center gap-4">
-                        <Icon icon={skill.icon} className="w-8 h-8 shrink-0" />
-                        <div className="flex flex-col">
-                          <span className="text-sm md:text-base font-bold text-white/90 leading-tight mb-0.5">{skill.name}</span>
-                          <span className="text-[10px] text-primary/70 uppercase tracking-widest leading-none mt-1">{skill.desc}</span>
+                      <li key={i} className="flex items-center gap-2 sm:gap-4 overflow-hidden">
+                        <Icon icon={skill.icon} className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" />
+                        <div className="flex flex-col min-w-0 flex-1">
+                          <span className="text-[11px] sm:text-sm md:text-base font-bold text-white/90 leading-tight mb-0.5 truncate">{skill.name}</span>
+                          <span className="text-[8px] sm:text-[10px] text-primary/70 uppercase tracking-wider sm:tracking-widest leading-none mt-0.5 sm:mt-1 truncate">{skill.desc}</span>
                         </div>
                       </li>
                     ))}
