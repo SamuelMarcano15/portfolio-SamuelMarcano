@@ -67,13 +67,13 @@ export default function Hero() {
               className="text-[10px] sm:text-xs lg:text-sm font-bold tracking-[0.15em] lg:tracking-[0.3em] uppercase"
               style={{ color: '#3894A1' }}
             >
-              P I P E L I N E &nbsp; D E &nbsp; D E S P L I E G U E.
+              PIPELINE&nbsp;DE&nbsp;DESPLIEGUE.
             </span>
           </div>
 
           {/* Description paragraph */}
           <p
-            className="text-sm lg:text-base leading-relaxed font-bold w-full"
+            className="text-sm lg:text-base leading-relaxed font-bold max-w-[288px]"
             style={{ color: '#031522' }}
           >
             Desde arquitecturas web de alto rendimiento hasta sistemas backend distribuidos,
@@ -127,14 +127,14 @@ export default function Hero() {
       </div>
 
       {/* ── Interactive Robot ──────────────────────────────── */}
-      <motion.div 
+      <motion.div
         className="relative mx-auto mt-14 mb-8 lg:m-0 flex justify-center lg:absolute lg:bottom-12 lg:left-1/2 lg:-translate-x-1/2 w-48 sm:w-56 lg:w-64 z-[5] pointer-events-none"
         initial="hidden"
         animate="visible"
         variants={fadeUp(0.45)}
       >
         {/* Mobile background circle (Hidden on Desktop) */}
-        <div 
+        <div
           className="lg:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] aspect-square rounded-full z-[-1]"
           style={{ backgroundColor: 'rgba(47, 64, 79, 0.3)' }}
           aria-hidden="true"

@@ -109,12 +109,10 @@ export default function AboutMe() {
 
             {/* Name */}
             <div className="mb-5">
-              <p className="text-6xl font-black uppercase leading-tight text-background">
-                Hola,{' '}
+              <p className="text-4xl font-black uppercase leading-tight text-background">
+                Hola, soy
               </p>
               <p className="text-6xl font-black uppercase leading-tight text-primary">
-                Soy
-                <br />
                 Samuel
               </p>
             </div>

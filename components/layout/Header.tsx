@@ -33,23 +33,22 @@ export default function Header() {
           initial={{ opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: 'easeOut' }}
-          className={`pointer-events-auto flex md:grid md:grid-cols-3 items-center justify-between md:justify-center w-full transition-all duration-300 rounded-full ${
-            isScrolled 
-              ? 'max-w-4xl px-6 md:px-8 py-3 bg-[#2F404F]/70 backdrop-blur-md shadow-lg shadow-black/20' 
+          className={`pointer-events-auto flex md:grid md:grid-cols-3 items-center justify-between md:justify-center w-full transition-all duration-300 rounded-full ${isScrolled
+              ? 'max-w-4xl px-6 md:px-8 py-3 bg-[#2F404F]/70 backdrop-blur-md shadow-lg shadow-black/20'
               : 'max-w-7xl px-8 md:px-10 py-5 md:py-6 bg-[#2F404F]'
-          }`}
+            }`}
         >
           {/* Left nav (Desktop) */}
-          <div className="hidden md:flex items-center justify-end gap-8 pl-2">
+          <div className="hidden md:flex items-center justify-end gap-8 pl-2 whitespace-nowrap">
             {leftNav.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 className="group relative flex items-center gap-2.5 px-2 py-1 text-xs font-bold text-white/70 hover:text-white tracking-widest uppercase transition-colors duration-300"
               >
-                <Icon 
-                  icon={item.icon} 
-                  className="w-5 h-5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:text-[#3894A1]" 
+                <Icon
+                  icon={item.icon}
+                  className="w-5 h-5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:text-[#3894A1]"
                 />
                 <span className="relative">
                   {item.label}
@@ -77,9 +76,9 @@ export default function Header() {
                 href={item.href}
                 className="group relative flex items-center gap-2.5 px-2 py-1 text-xs font-bold text-white/70 hover:text-white tracking-widest uppercase transition-colors duration-300"
               >
-                <Icon 
-                  icon={item.icon} 
-                  className="w-5 h-5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:text-[#3894A1]" 
+                <Icon
+                  icon={item.icon}
+                  className="w-5 h-5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:text-[#3894A1]"
                 />
                 <span className="relative">
                   {item.label}
@@ -90,7 +89,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden flex items-center justify-center p-1 text-white hover:text-white/80 transition-colors"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Abrir menú"
@@ -104,46 +103,46 @@ export default function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            <motion.div 
-               initial={{ opacity: 0 }}
-               animate={{ opacity: 1 }}
-               exit={{ opacity: 0 }}
-               transition={{ duration: 0.3 }}
-               onClick={() => setIsMenuOpen(false)}
-               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsMenuOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
             />
             <motion.div
-               initial={{ x: '100%' }}
-               animate={{ x: 0 }}
-               exit={{ x: '100%' }}
-               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-               className="fixed top-0 right-0 bottom-0 w-[280px] bg-[#031522] z-[70] p-8 shadow-2xl flex flex-col border-l border-white/5"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 bottom-0 w-[280px] bg-[#031522] z-[70] p-8 shadow-2xl flex flex-col border-l border-white/5"
             >
-               <div className="flex justify-end mb-12">
-                 <button 
-                  onClick={() => setIsMenuOpen(false)} 
+              <div className="flex justify-end mb-12">
+                <button
+                  onClick={() => setIsMenuOpen(false)}
                   className="text-white/50 hover:text-white transition-colors"
                   aria-label="Cerrar menú"
-                 >
-                   <Icon icon="mdi:close" className="w-8 h-8" />
-                 </button>
-               </div>
-               <nav className="flex flex-col gap-8">
-                 {allNav.map((item) => (
-                   <Link
-                     key={item.label}
-                     href={item.href}
-                     onClick={() => setIsMenuOpen(false)}
-                     className="group flex items-center gap-4 text-sm font-bold text-white/70 hover:text-white tracking-widest uppercase transition-colors duration-300"
-                   >
-                     <Icon 
-                       icon={item.icon} 
-                       className="w-6 h-6 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:text-[#3894A1]" 
-                     />
-                     <span>{item.label}</span>
-                   </Link>
-                 ))}
-               </nav>
+                >
+                  <Icon icon="mdi:close" className="w-8 h-8" />
+                </button>
+              </div>
+              <nav className="flex flex-col gap-8">
+                {allNav.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="group flex items-center gap-4 text-sm font-bold text-white/70 hover:text-white tracking-widest uppercase transition-colors duration-300"
+                  >
+                    <Icon
+                      icon={item.icon}
+                      className="w-6 h-6 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:text-[#3894A1]"
+                    />
+                    <span>{item.label}</span>
+                  </Link>
+                ))}
+              </nav>
             </motion.div>
           </>
         )}
