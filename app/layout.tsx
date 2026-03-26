@@ -12,14 +12,48 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s - ${siteConfig.name}`,
+  },
   description: siteConfig.description,
-  keywords: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Gemini API', 'Ingeniería de Sistemas', 'Portfolio'],
-  authors: [{ name: 'Samuel Marcano' }],
+  keywords: [
+    'Samuel Marcano', 
+    'Ingeniero de Sistemas', 
+    'Full Stack Developer',
+    'Portafolio', 
+    'Next.js', 
+    'React', 
+    'TypeScript', 
+    'Tailwind CSS'
+  ],
+  authors: [{ name: 'Samuel Marcano', url: siteConfig.url }],
+  creator: 'Samuel Marcano',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
+    type: 'website',
+    locale: 'es_VE',
+    url: siteConfig.url,
     title: siteConfig.title,
     description: siteConfig.description,
-    type: 'website',
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/opengraph-image.png`],
   },
 }
 

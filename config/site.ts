@@ -3,7 +3,7 @@ export const siteConfig = {
   title: 'Samuel Marcano | Ingeniero de Sistemas & Desarrollador Web Full Stack',
   description:
     'Portafolio profesional de Samuel Marcano. Especialista en Next.js, TypeScript, Tailwind CSS e Integración de IA (Gemini API). Ingeniería de software con precisión y visión.',
-  url: 'https://samuelmarcano.dev',
+  url: 'https://portfolio-samuel-marcano.vercel.app',
   email: 'samuelmarcanosalasar@gmail.com',
   location: 'Venezuela / Remote · Global',
   social: {
